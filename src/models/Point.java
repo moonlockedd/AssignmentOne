@@ -4,9 +4,16 @@ public class Point {
     private double x;
     private double y;
 
-    // constructor having both parameters
+    Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 
-    // distance(Point dest) - distance from current point to the dest point
+    public double getX() {
+        return x;
+    }
 
-    // toString
+    public double getY() {
+        return y;
+    }
 }

@@ -6,7 +6,7 @@ public class Shape {
     private ArrayList<Point> points;
     private double Perimeter;
 
-    Shape() {
+    public Shape() {
         points = new ArrayList<>();
     }
 
@@ -14,7 +14,7 @@ public class Shape {
         this.points.add(point);
     }
 
-    public double getPerimeter() {
+    public double calculatePerimeter() {
         double perimeter = 0;
 
         for (int i = 0; i < this.points.size(); i++) {

@@ -1,13 +1,12 @@
 package models;
 
+import java.util.ArrayList;
+
 public class Shape {
-    // container of Points (e.g. ArrayList<Point>)
+    private ArrayList<Point> points;
+    private double Perimeter;
 
-    // addPoint(Point) - adds to the container
-
-    // calculatePerimeter()
-
-    // getAverageSide()
-
-    // getLongestSide()
+    Shape() {
+        points = new ArrayList<>();
+    }
 }

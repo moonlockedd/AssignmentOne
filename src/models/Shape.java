@@ -16,12 +16,10 @@ public class Shape {
     public double calculatePerimeter() {
         double perimeter = 0;
 
-        for (int i = 0, size = this.points.size(); i < size; i++) {
-            if (i + 1 != size)
-                perimeter += this.points.get(i).distanceTo(this.points.get(i + 1));
-            else
-                perimeter += this.points.get(i).distanceTo(this.points.getFirst());
+        for (int i = 0; i < this.points.size() - 1; i++) {
+            perimeter += this.points.get(i).distanceTo(this.points.get(i + 1));
         }
+        perimeter += this.points.getLast().distanceTo(this.points.getFirst());
 
         return perimeter;
     }
@@ -33,18 +31,16 @@ public class Shape {
     public double getLongestSide() {
         double longestSide = this.points.get(0).distanceTo(this.points.get(1));
 
-        for (int i = 1, size = this.points.size(); i < size; i++) {
-            double currentSide;
-
-            if (i + 1 != size)
-                currentSide = this.points.get(i).distanceTo(this.points.get(i + 1));
-            else
-                currentSide = this.points.get(i).distanceTo(this.points.getFirst());
+        for (int i = 1, size = this.points.size() - 1; i < size; i++) {
+            double currentSide = this.points.get(i).distanceTo(this.points.get(i + 1));
 
             if (currentSide > longestSide)
                 longestSide = currentSide;
 
         }
+        double currentSide = this.points.getLast().distanceTo(this.points.getLast());
+        if (currentSide > longestSide)
+            longestSide = currentSide;
 
         return longestSide;
     }

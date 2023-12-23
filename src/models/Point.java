@@ -5,8 +5,16 @@ public class Point {
     private double y;
 
     public Point(double x, double y) {
-        this.x = x;
+        setX(x);
+        setY(y);
+    }
+
+    private void setY(double y) {
         this.y = y;
+    }
+
+    private void setX(double x) {
+        this.x = x;
     }
 
     public double getX() {

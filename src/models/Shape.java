@@ -17,8 +17,8 @@ public class Shape {
     public double calculatePerimeter() {
         double perimeter = 0;
 
-        for (int i = 0; i < this.points.size(); i++) {
-            if (i + 1 != this.points.size())
+        for (int i = 0, size = this.points.size(); i < size; i++) {
+            if (i + 1 != size)
                 perimeter += this.points.get(i).distanceTo(this.points.get(i + 1));
             else
                 perimeter += this.points.get(i).distanceTo(this.points.getFirst());

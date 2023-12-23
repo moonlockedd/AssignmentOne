@@ -9,4 +9,8 @@ public class Shape {
     Shape() {
         points = new ArrayList<>();
     }
+
+    public void addPoint(Point point) {
+        this.points.add(point);
+    }
 }

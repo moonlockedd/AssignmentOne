@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Shape {
     private ArrayList<Point> points;
-    private double Perimeter;
 
     public Shape() {
         points = new ArrayList<>();
@@ -26,4 +25,9 @@ public class Shape {
 
         return perimeter;
     }
+
+    public double getAverageSide() {
+        return calculatePerimeter() / this.points.size();
+    }
+
 }

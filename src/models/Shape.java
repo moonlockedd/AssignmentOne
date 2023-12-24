@@ -29,16 +29,15 @@ public class Shape {
     }
 
     public double getLongestSide() {
-        double longestSide = this.points.get(0).distanceTo(this.points.get(1));
+        double longestSide = this.points.getFirst().distanceTo(this.points.get(1));
 
         for (int i = 1, size = this.points.size() - 1; i < size; i++) {
             double currentSide = this.points.get(i).distanceTo(this.points.get(i + 1));
-
             if (currentSide > longestSide)
                 longestSide = currentSide;
-
         }
-        double currentSide = this.points.getLast().distanceTo(this.points.getLast());
+
+        double currentSide = this.points.getLast().distanceTo(this.points.getFirst());
         if (currentSide > longestSide)
             longestSide = currentSide;
 

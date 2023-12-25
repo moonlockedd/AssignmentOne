@@ -7,10 +7,13 @@ import java.util.Scanner;
 
 public class MyApplication {
     public static void main(String[] args) throws FileNotFoundException {
+        // One noteworthy thing is that my Scanner could not read points, if
+        // the decimals were separated by a comma rather than a dot
+
         File file = new File("C:\\Users\\user\\IdeaProjects\\AssignmentOne\\src\\data.txt");
 
         Scanner sc = new Scanner(file);
-        // Initialize shape
+        // Create an instance of a Shape
         Shape shape = new Shape();
 
         // Add points until end of file

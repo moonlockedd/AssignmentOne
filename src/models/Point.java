@@ -43,6 +43,7 @@ public class Point {
     @Override
     public String toString() {
         return "x-coordinate: " + x +
-                "\ny-coordinate: " + y;
+                "\ny-coordinate: " + y +
+                "\n";
     }
 }

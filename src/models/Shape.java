@@ -3,21 +3,21 @@ package models;
 import java.util.ArrayList;
 
 public class Shape {
-    // Create an ArrayList object to store points
+    // ArrayList to store points
     private ArrayList<Point> points;
 
-    // Shape constructor that initializes points ArrayList
+    // Shape constructor that allocates memory for points ArrayList
     public Shape() {
         points = new ArrayList<>();
     }
 
-    // Append a point parameter to the points ArrayList
+    // Append a point to the points ArrayList
     public void addPoint(Point point) {
         this.points.add(point);
     }
 
     // This method calculates perimeter by looping through every vertex and summing
-    // the distance between each pair.
+    // the distance between each consecutive pair.
     public double calculatePerimeter() {
         double perimeter = 0;
 

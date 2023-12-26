@@ -10,7 +10,7 @@ public class MyApplication {
         // One noteworthy thing is that my Scanner could not read points, if
         // the decimals were separated by a comma rather than a dot
 
-        File file = new File("C:\\Users\\user\\IdeaProjects\\AssignmentOne\\src\\data.txt");
+        File file = new File("C:\\Users\\user\\IdeaProjects\\AssignmentOne\\src\\source.txt");
 
         Scanner sc = new Scanner(file);
         // Create an instance of a Shape
